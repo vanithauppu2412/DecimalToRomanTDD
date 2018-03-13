@@ -5,7 +5,7 @@ namespace DecimalToRomanTDD
 {
     public class DecimalToRoman
     {
-        public static String ConvertDecimalToRoman(int arabic)
+        public static String ConvertDecimalToRoman(int number)
         {
             return "I";
         }
@@ -14,9 +14,9 @@ namespace DecimalToRomanTDD
     public class DecimalToRomanTest
     {
         [TestMethod]
-        public void one()
+        public void Two()
         {
-            Assert.AreEqual("I", DecimalToRoman.ConvertDecimalToRoman(1));
+            Assert.AreEqual("II", DecimalToRoman.ConvertDecimalToRoman(2));
         }
     }
 }
