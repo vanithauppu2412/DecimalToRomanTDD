@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DecimalToRomanTDD
@@ -7,11 +8,12 @@ namespace DecimalToRomanTDD
     {
         public static String ConvertDecimalToRoman(int number)
         {
-            if(number == 2)
+            StringBuilder result = new StringBuilder();
+            for (int i = 0; i < number; i++)
             {
-                return "II";
+                result.Append("I");
             }
-            return "I";
+            return result.ToString();
         }
     }
     [TestClass]
@@ -20,7 +22,9 @@ namespace DecimalToRomanTDD
         [TestMethod]
         public void Two()
         {
+            Assert.AreEqual("III", DecimalToRoman.ConvertDecimalToRoman(3));
             Assert.AreEqual("II", DecimalToRoman.ConvertDecimalToRoman(2));
+            Assert.AreEqual("I", DecimalToRoman.ConvertDecimalToRoman(1));
         }
     }
 }
