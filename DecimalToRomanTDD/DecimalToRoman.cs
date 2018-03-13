@@ -7,6 +7,10 @@ namespace DecimalToRomanTDD
     {
         public static String ConvertDecimalToRoman(int number)
         {
+            if(number == 2)
+            {
+                return "II";
+            }
             return "I";
         }
     }
