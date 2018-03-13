@@ -6,43 +6,36 @@ namespace DecimalToRomanTDD
 {
     public class DecimalToRoman
     {
+        private static int[] Numerals = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+        private static String[] RomanSymbols = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
         public static String ConvertDecimalToRoman(int number)
         {
             StringBuilder result = new StringBuilder();
             int remaining = number;
-            if (remaining == 9)
+            for (int i = 0; i < Numerals.Length; i++)
             {
-                result.Append("IX");
-                remaining -= 9;
-            }
-            if (remaining >= 5)
-            {
-                result.Append("V");
-                remaining -= 5;
-            }
-            if (remaining == 4)
-            {
-                result.Append("IV");
-                remaining -= 4;
-            }
-            for (int i = 0; i < remaining; i++)
-            {
-                result.Append("I");
+               remaining = appendRomanNumerals(remaining, Numerals[i], RomanSymbols[i], result);
             }
             return result.ToString();
         }
+        private static int appendRomanNumerals(int num, int value, String romanDigits, StringBuilder builder)
+        {
+            int result = num;
+            while (result >= value)
+            {
+                builder.Append(romanDigits);
+                result -= value;
+            }
+            return result;
+        }
     }
-    [TestClass]
+        [TestClass]
     public class DecimalToRomanTest
     {
         [TestMethod]
         public void TestMethod()
         {
-            //Assert.AreEqual("V", DecimalToRoman.ConvertDecimalToRoman(5));
-            //Assert.AreEqual("VI", DecimalToRoman.ConvertDecimalToRoman(6));
-            //Assert.AreEqual("VII", DecimalToRoman.ConvertDecimalToRoman(7));
-            //Assert.AreEqual("VIII", DecimalToRoman.ConvertDecimalToRoman(8));
-            Assert.AreEqual("IX", DecimalToRoman.ConvertDecimalToRoman(9));
+            Assert.AreEqual("MMXVI", DecimalToRoman.ConvertDecimalToRoman(2016));
 
         }
     }
