@@ -33,10 +33,11 @@ namespace DecimalToRomanTDD
         [TestMethod]
         public void TestMethod()
         {
-            Assert.AreEqual("V", DecimalToRoman.ConvertDecimalToRoman(5));
-            Assert.AreEqual("VI", DecimalToRoman.ConvertDecimalToRoman(6));
-            Assert.AreEqual("VII", DecimalToRoman.ConvertDecimalToRoman(7));
-            Assert.AreEqual("VIII", DecimalToRoman.ConvertDecimalToRoman(8));
+            //Assert.AreEqual("V", DecimalToRoman.ConvertDecimalToRoman(5));
+            //Assert.AreEqual("VI", DecimalToRoman.ConvertDecimalToRoman(6));
+            //Assert.AreEqual("VII", DecimalToRoman.ConvertDecimalToRoman(7));
+            //Assert.AreEqual("VIII", DecimalToRoman.ConvertDecimalToRoman(8));
+            Assert.AreEqual("IX", DecimalToRoman.ConvertDecimalToRoman(9));
 
         }
     }
