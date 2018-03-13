@@ -20,11 +20,10 @@ namespace DecimalToRomanTDD
     public class DecimalToRomanTest
     {
         [TestMethod]
-        public void Two()
+        public void Five()
         {
-            Assert.AreEqual("III", DecimalToRoman.ConvertDecimalToRoman(3));
-            Assert.AreEqual("II", DecimalToRoman.ConvertDecimalToRoman(2));
-            Assert.AreEqual("I", DecimalToRoman.ConvertDecimalToRoman(1));
+            Assert.AreEqual("V", DecimalToRoman.ConvertDecimalToRoman(5));
+           
         }
     }
 }
