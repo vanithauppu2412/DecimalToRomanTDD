@@ -3,6 +3,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DecimalToRomanTDD
 {
+    public class DecimalToRoman
+    {
+        public static String ConvertDecimalToRoman(int arabic)
+        {
+            return "I";
+        }
+    }
     [TestClass]
     public class DecimalToRomanTest
     {
